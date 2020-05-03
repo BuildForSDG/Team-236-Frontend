@@ -35,6 +35,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "eslint-plugin-react": "^7.19.0",
     "node-sass": "^4.14.0",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
@@ -44,6 +45,8 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "babel-jest": "^25.4.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",

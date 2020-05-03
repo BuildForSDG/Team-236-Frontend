@@ -1,8 +1,8 @@
 import React from 'react';
 
 const App = () => {
-    return(
-        <div className="app">
+    return (
+        <div>
             <h1>BuildForSDG</h1>
         </div>
     )
