@@ -1,9 +1,11 @@
-import React from 'react' 
+import React from 'react'
 
-export default function App () {
-    return(
-        <div className="app">
-            <h1>BuildForSDG</h1>
-        </div>
-    )
+const App = () => {
+  return (
+    <div>
+      <h1>BuildForSDG</h1>
+    </div>
+  )
 }
+
+export default App;

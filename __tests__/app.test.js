@@ -1,8 +1,8 @@
-import App from '../src/index';
+import app from '../src/index';
 
 describe('app module', () => {
   test('it exists', async () => {
-    expect(App).toBeDefined();
+    expect(app).toBeDefined();
   });
 
   test('it returns program name with SDGs', async () => {
