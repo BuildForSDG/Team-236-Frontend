@@ -1,0 +1,27 @@
+.btn {
+  width: 6em;
+  height: 2.3em;
+  border-radius: 0.3em;
+  outline: none;
+  background: $btn-primary;
+  color: $primary;
+  border: none;
+  font-weight: bold;
+  font-size: $large;
+  text-transform: capitalize;
+  &:hover {
+    cursor: pointer;
+    transition: 2s ease-in;
+    background: $btn-hover;
+  }
+}
+
+.login__btn {
+  margin-top: 2%;
+  width: 100%;
+}
+
+.signup__btn {
+  margin-top: 2%;
+  width: 100%;
+}
