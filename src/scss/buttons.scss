@@ -9,11 +9,12 @@
   font-weight: bold;
   font-size: $large;
   text-transform: capitalize;
-  &:hover {
-    cursor: pointer;
-    transition: 2s ease-in;
-    background: $btn-hover;
-  }
+}
+
+.btn:hover {
+  cursor: pointer;
+  transition: 2s ease-in;
+  background: $btn-hover;
 }
 
 .login__btn {
