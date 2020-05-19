@@ -10,6 +10,7 @@ export default class Login extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handlePasswordToggle = this.handlePasswordToggle.bind(this)
   }
 
   handleChange(e) {
@@ -42,7 +43,18 @@ export default class Login extends React.Component {
     if (!pwd.value.includes('#', '$', '*', '%')) {
       pwdErrMsg.innerText = 'password must include one of these special characters, #,$,*,%';
     }
-    alert('Login successful!');
+    // alert('Login successful!');
+  }
+
+  // this method toggles th password's state.
+  handlePasswordToggle() {
+    const pwdField = document.getElementById('password');
+
+    if (pwdField.type === 'password') {
+        pwdField.type = 'text'
+    } else {
+        pwdField.type = 'password'
+    }
   }
 
   render() {
@@ -79,6 +91,9 @@ export default class Login extends React.Component {
                 placeholder="enter your password please"
                 className="form__control"
               />
+               <span id="password__toggle" toggle="#password" onClick={this.handlePasswordToggle}>
+                <i className="fas fa-eye-slash"></i>
+              </span>
               <p id="password__err"></p>
             </div>
           </div>

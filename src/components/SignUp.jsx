@@ -12,6 +12,8 @@ export default class Signup extends React.Component {
       confirmPassword: ''
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handlePasswordToggle = this.handlePasswordToggle.bind(this)
   }
 
   handleChange(e) {
@@ -61,6 +63,18 @@ export default class Signup extends React.Component {
     }
     if (!password.value.includes('#', '$', '*', '%')) {
       pwdErrMsg.innerText = 'Password must contain at least one of these special characters #,$,*,%';
+    }
+    alert('signup successful')
+  }
+
+  // this `method` enables the user to see their passwords
+  handlePasswordToggle() {
+    const pwdField = document.getElementById('password');
+
+    if (pwdField.type === 'password') {
+        pwdField.type = 'text'
+    } else {
+        pwdField.type = 'password'
     }
   }
 
@@ -124,6 +138,9 @@ export default class Signup extends React.Component {
                 onChange={this.handleChange}
                 value={password}
               />
+              <span id="password__toggle" toggle="#password" onClick={this.handlePasswordToggle}>
+                <i className="fas fa-eye-slash"></i>
+              </span>
             </div>
             <p id="password__err"></p>
           </div>
