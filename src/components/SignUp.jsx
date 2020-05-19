@@ -12,8 +12,8 @@ export default class Signup extends React.Component {
       confirmPassword: ''
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handlePasswordToggle = this.handlePasswordToggle.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handlePasswordToggle = this.handlePasswordToggle.bind(this);
   }
 
   handleChange(e) {
@@ -64,7 +64,7 @@ export default class Signup extends React.Component {
     if (!password.value.includes('#', '$', '*', '%')) {
       pwdErrMsg.innerText = 'Password must contain at least one of these special characters #,$,*,%';
     }
-    alert('signup successful')
+    alert('signup successful');
   }
 
   // this `method` enables the user to see their passwords
@@ -72,9 +72,9 @@ export default class Signup extends React.Component {
     const pwdField = document.getElementById('password');
 
     if (pwdField.type === 'password') {
-        pwdField.type = 'text'
+      pwdField.type = 'text';
     } else {
-        pwdField.type = 'password'
+      pwdField.type = 'password';
     }
   }
 
@@ -82,10 +82,11 @@ export default class Signup extends React.Component {
     const { firstname, lastname, email, password, confirmPassword } = this.state;
 
     return (
-      <div className="base__login mt-4 ml-5">
-        <h2 className="form__intro">Sign Up</h2>
-        <form action="" className="signup" onSubmit={this.handleSubmit}>
-          <div className="form__group flex__content__center">
+      <div className="base__signup flex__content__center">
+        <div className="index"></div>
+        <form action="" className="signup mt-4 ml" onSubmit={this.handleSubmit}>
+          <h2 className="form__intro">Sign Up</h2>
+          <div className="form__group flex__content__center signup__flex">
             <div className="firstname">
               <input
                 type="text"
@@ -164,7 +165,7 @@ export default class Signup extends React.Component {
           </div>
           <p className="mt login__text">
             Have an account already?{' '}
-            <Link to="/" className="link__text__primary">
+            <Link to="/login" className="link__text__primary">
               login
             </Link>
           </p>

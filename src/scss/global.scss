@@ -34,11 +34,11 @@ p {
 
 .text__white {
   color: ghostwhite;
+  text-decoration: none;
 }
 
 .flex__content__center {
   display: flex;
-  padding-top: 2em;
 }
 
 .flex__content__vert {
@@ -118,6 +118,9 @@ p {
 form {
   width: 480px;
   height: 465px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 3s;
 }
 
 .form__group label {
@@ -163,4 +166,66 @@ form {
 
 .lastname {
   margin-left: 10%;
+}
+
+.firstname,
+.lastname {
+  padding-top: 2em;
+}
+// signup section ends here
+
+// index page section starts here
+.index__intro {
+  margin-left: 2%;
+  margin-top: 3%;
+  width: 500px;
+  padding: 0.5em 0.5em;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 3s;
+}
+
+.index {
+  background-image: url('../assets/brain-clean.png');
+  background-size: cover;
+  height: 100vh;
+  width: 70%;
+  background-position: center;
+  opacity: 0;
+  animation: open 2s forwards;
+}
+
+.index__intro p {
+  font-size: 2.4em;
+  word-spacing: 2px;
+}
+
+@media only screen and (max-width: 576px) {
+  .index {
+    display: none;
+    animation: none;
+  }
+
+  form {
+    animation-delay: 1s;
+    padding: 0.5em 1.2em;
+    margin: 3%;
+  }
+
+  .form__control {
+    height: 45px;
+  }
+
+  .mt-4 {
+      margin-top: 18%;
+  }
+
+  .mt-6 {
+      margin-top: 40%;
+  }
+
+  #password__toggle {
+    margin-left: -8%;
+    margin-top: 3.5%;
+  }
 }

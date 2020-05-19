@@ -10,7 +10,7 @@ export default class Login extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handlePasswordToggle = this.handlePasswordToggle.bind(this)
+    this.handlePasswordToggle = this.handlePasswordToggle.bind(this);
   }
 
   handleChange(e) {
@@ -51,9 +51,9 @@ export default class Login extends React.Component {
     const pwdField = document.getElementById('password');
 
     if (pwdField.type === 'password') {
-        pwdField.type = 'text'
+      pwdField.type = 'text';
     } else {
-        pwdField.type = 'password'
+      pwdField.type = 'password';
     }
   }
 
@@ -61,9 +61,10 @@ export default class Login extends React.Component {
     const { email, password } = this.state;
 
     return (
-      <div className="base__login mt-6 ml-5">
-        <h2 className="form__intro">Login</h2>
-        <form action="" className="login" onSubmit={this.handleSubmit}>
+      <div className="base__login flex__content__center">
+        <div className="index"></div>
+        <form action="" className="login mt-6 ml" onSubmit={this.handleSubmit}>
+          <h2 className="form__intro">Login</h2>
           <div className="username form__group">
             <label>Email</label>
             <div className="email__field">
@@ -91,7 +92,7 @@ export default class Login extends React.Component {
                 placeholder="enter your password please"
                 className="form__control"
               />
-               <span id="password__toggle" toggle="#password" onClick={this.handlePasswordToggle}>
+              <span id="password__toggle" toggle="#password" onClick={this.handlePasswordToggle}>
                 <i className="fas fa-eye-slash"></i>
               </span>
               <p id="password__err"></p>
