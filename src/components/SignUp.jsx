@@ -64,7 +64,7 @@ export default class Signup extends React.Component {
     if (!password.value.includes('#', '$', '*', '%')) {
       pwdErrMsg.innerText = 'Password must contain at least one of these special characters #,$,*,%';
     }
-    alert('signup successful');
+    // alert('signup successful');
   }
 
   // this `method` enables the user to see their passwords
@@ -85,7 +85,7 @@ export default class Signup extends React.Component {
       <div className="base__signup flex__content__center">
         <div className="index"></div>
         <form action="" className="signup mt-4 ml" onSubmit={this.handleSubmit}>
-          <h2 className="form__intro">Sign Up</h2>
+          <h2 className="form__intro">Sign Up here</h2>
           <div className="form__group flex__content__center signup__flex">
             <div className="firstname">
               <input

@@ -64,7 +64,7 @@ export default class Login extends React.Component {
       <div className="base__login flex__content__center">
         <div className="index"></div>
         <form action="" className="login mt-6 ml" onSubmit={this.handleSubmit}>
-          <h2 className="form__intro">Login</h2>
+          <h2 className="form__intro">Login to your account</h2>
           <div className="username form__group">
             <label>Email</label>
             <div className="email__field">

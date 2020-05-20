@@ -110,17 +110,28 @@ p {
 }
 
 .form__intro {
-  text-decoration: underline;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 1%;
+  margin-bottom: 4%;
+  font-weight: bolder;
 }
 // base styles ends here
 
 // login section starts here
+h2 {
+  font-size: 30px;
+}
+
 form {
   width: 480px;
   height: 465px;
   opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
-  animation-delay: 3s;
+  animation: fadeIn 1s ease-in forwards;
+  -o-animation: fadeIn 1s ease-in forwards;
+  -moz-animation: fadeIn 1s ease-in forwards;
+  -webkit-animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.5s;
 }
 
 .form__group label {
@@ -181,47 +192,108 @@ form {
   width: 500px;
   padding: 0.5em 0.5em;
   opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
-  animation-delay: 3s;
+  animation: fadeIn 1s ease-in forwards;
+  -moz-animation: fadeIn 1s ease-in forwards;
+  -webkit-animation: fadeIn 1s ease-in forwards;
+  -o-animation: fadeIn 1s ease-in forwards;
 }
 
 .index {
   background-image: url('../assets/brain-clean.png');
   background-size: cover;
-  height: 100vh;
-  width: 70%;
   background-position: center;
-  opacity: 0;
-  animation: open 2s forwards;
+  width: 70%;
+  height: 100vh;
+  // -moz-animation: open-lg 2s forwards;
+  // -webkit-animation: open-lg 2s forwards;
+  // -o-animation: open-lg 2s forwards;
+  // animation: open-lg 2s forwards;
 }
 
 .index__intro p {
   font-size: 2.4em;
   word-spacing: 2px;
+  margin-top: 2em;
 }
+
+.index__intro h2 {
+  margin-top: 4em;
+}
+// index page ends here.
 
 @media only screen and (max-width: 576px) {
   .index {
-    display: none;
-    animation: none;
+    background-image: linear-gradient(rgba(238, 234, 202, 0.9), rgba(238, 234, 202, 0.9)),
+      url('../assets/brain-clean.png');
+    background-size: cover;
+    -moz-animation: open-sm 1s forwards;
+    -webkit-animation: open-sm 1s forwards;
+    -o-animation: open-sm 1s forwards;
+    animation: open-sm 1s forwards;
+    background-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
   }
 
   form {
-    animation-delay: 1s;
     padding: 0.5em 1.2em;
-    margin: 3%;
+    margin: 0.7em 0.7em;
+    background: ghostwhite;
+    height: 430px;
+    animation: fadeIn 1s ease-in forwards;
+    -o-animation: fadeIn 1s ease-in forwards;
+    -moz-animation: fadeIn 1s ease-in forwards;
+    -webkit-animation: fadeIn 1s ease-in forwards;
+    animation-delay: 2s;
   }
 
-  .form__control {
-    height: 45px;
+  // signup section starts here
+  .signup {
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, $alpha: 0.55);
+  }
+
+  .signup .form__control {
+    height: 100%;
+  }
+
+  .signup .form__group {
+    margin-top: -1.3em;
+  }
+
+  .btn__group {
+    margin-top: -1.5em;
+  }
+
+  .firstname .form__control {
+    height: 50px;
+  }
+
+  .lastname .form__control {
+    height: 50px;
   }
 
   .mt-4 {
-    margin-top: 18%;
+    margin-top: 28%;
+  }
+  //signup section ends here
+
+  // login section starts here
+  .login {
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, $alpha: 0.55);
   }
 
   .mt-6 {
-    margin-top: 40%;
+    margin-top: 35%;
+  }
+  // login section ends here
+
+  // index page starts here
+  .index__intro {
+    margin-top: 25%;
   }
 
   #password__toggle {

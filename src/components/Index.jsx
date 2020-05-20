@@ -6,7 +6,7 @@ const Index = () => {
     <div className="base__index flex__content__center">
       <div className="index"></div>
       <div className="index__intro ">
-        <h2 className="mt-8">Welcome to Swiftana</h2>
+        <h2 className="">Welcome to Swiftana</h2>
         <div className="details mt">
           <p className="mt-2 ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, doloribus? Eos eveniet cupiditate quae
@@ -21,7 +21,7 @@ const Index = () => {
             </Link>
           </button>
         </div>
-        <p className="mt login__text">
+        <p className="mt index__text">
           Have an account already?{' '}
           <Link to="/login" className="link__text__primary">
             login
