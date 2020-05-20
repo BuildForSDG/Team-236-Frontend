@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+//base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+  font-size: 10px;
+  background: ghostwhite;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+.text__white {
+  color: ghostwhite;
+  text-decoration: none;
+}
+
+.flex__content__center {
+  display: flex;
+}
+
+.flex__content__vert {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.flex__head {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5em 0.5em;
+  color: #17a2b8;
+}
+
+.mt {
+  margin-top: 2%;
+}
+
+.mt-2 {
+  margin-top: 4%;
+}
+
+.mt-4 {
+  margin-top: 6%;
+}
+
+.mt-6 {
+  margin-top: 8%;
+}
+
+.mt-8 {
+  margin-top: 10%;
+}
+
+.ml {
+  margin-left: 1%;
+}
+
+.ml-3 {
+  margin-left: 3%;
+}
+
+.ml-5 {
+  margin-left: 5%;
+}
+
+.ml-7 {
+  margin-left: 7%;
+}
+
+.ml-9 {
+  margin-left: 9%;
+}
+
+.link__text__primary {
+  color: #17a2b8;
+}
+
+#firstname__err,
+#lastname__err,
+#email__err,
+#password__err,
+#confirmPwd__err {
+  margin-top: 1px;
+  width: 100%;
+  color: #ec183b;
+  font-size: 1.3em;
+}
+
+.form__intro {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 1%;
+  margin-bottom: 4%;
+  font-weight: bolder;
+}
+// base styles ends here
+
+// login section starts here
+h2 {
+  font-size: 30px;
+}
+
+form {
+  width: 480px;
+  height: 465px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  -o-animation: fadeIn 1s ease-in forwards;
+  -moz-animation: fadeIn 1s ease-in forwards;
+  -webkit-animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+.form__group label {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.form__group {
+  width: 100%;
+  height: 55px;
+  margin: 4em 0;
+}
+
+.form__control {
+  width: 100%;
+  border-radius: 4px;
+  height: 2.5em;
+  font-size: 19px;
+  border: 1px solid #17a2b8;
+  outline: none;
+  padding: 0.7em 0.7em;
+  background: ghostwhite;
+}
+
+.signup__text {
+  font-size: 1.5em;
+}
+
+#password__toggle {
+  position: absolute;
+  margin-top: 1%;
+  margin-left: -2.5%;
+  font-size: 1.5em;
+  color: #17a2b8;
+}
+
+// login section ends here.
+
+// signup section starts here
+.login__text {
+  font-size: 1.5em;
+}
+
+.lastname {
+  margin-left: 10%;
+}
+
+.firstname,
+.lastname {
+  padding-top: 2em;
+}
+// signup section ends here
+
+// index page section starts here
+.index__intro {
+  margin-left: 2%;
+  margin-top: 3%;
+  width: 500px;
+  padding: 0.5em 0.5em;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  -moz-animation: fadeIn 1s ease-in forwards;
+  -webkit-animation: fadeIn 1s ease-in forwards;
+  -o-animation: fadeIn 1s ease-in forwards;
+}
+
+.index {
+  background-image: url('../assets/brain-clean.png');
+  background-size: cover;
+  background-position: center;
+  width: 70%;
+  height: 100vh;
+  // -moz-animation: open-lg 2s forwards;
+  // -webkit-animation: open-lg 2s forwards;
+  // -o-animation: open-lg 2s forwards;
+  // animation: open-lg 2s forwards;
+}
+
+.index__intro p {
+  font-size: 2.4em;
+  word-spacing: 2px;
+  margin-top: 2em;
+}
+
+.index__intro h2 {
+  margin-top: 4em;
+}
+// index page ends here.
+
+@media only screen and (max-width: 576px) {
+  .index {
+    background-image: linear-gradient(rgba(238, 234, 202, 0.9), rgba(238, 234, 202, 0.9)),
+      url('../assets/brain-clean.png');
+    background-size: cover;
+    -moz-animation: open-sm 1s forwards;
+    -webkit-animation: open-sm 1s forwards;
+    -o-animation: open-sm 1s forwards;
+    animation: open-sm 1s forwards;
+    background-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  form {
+    padding: 0.5em 1.2em;
+    margin: 0.7em 0.7em;
+    background: ghostwhite;
+    height: 430px;
+    animation: fadeIn 1s ease-in forwards;
+    -o-animation: fadeIn 1s ease-in forwards;
+    -moz-animation: fadeIn 1s ease-in forwards;
+    -webkit-animation: fadeIn 1s ease-in forwards;
+    animation-delay: 2s;
+  }
+
+  // signup section starts here
+  .signup {
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, $alpha: 0.55);
+  }
+
+  .signup .form__control {
+    height: 100%;
+  }
+
+  .signup .form__group {
+    margin-top: -1.3em;
+  }
+
+  .btn__group {
+    margin-top: -1.5em;
+  }
+
+  .firstname .form__control {
+    height: 50px;
+  }
+
+  .lastname .form__control {
+    height: 50px;
+  }
+
+  .mt-4 {
+    margin-top: 28%;
+  }
+  //signup section ends here
+
+  // login section starts here
+  .login {
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, $alpha: 0.55);
+  }
+
+  .mt-6 {
+    margin-top: 35%;
+  }
+  // login section ends here
+
+  // index page starts here
+  .index__intro {
+    margin-top: 25%;
+  }
+
+  #password__toggle {
+    margin-left: -8%;
+    margin-top: 3.5%;
+  }
+}
